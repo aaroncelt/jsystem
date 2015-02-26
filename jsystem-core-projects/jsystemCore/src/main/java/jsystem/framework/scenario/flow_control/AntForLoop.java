@@ -118,8 +118,8 @@ public class AntForLoop extends AntFlowControl {
 	public Element addExecutorXml(Element targetScenario, Document doc) {
 		Element forElement = doc.createElement(XML_TAG);
 		//ITAI: The actual values are set in the properties file and not in the XML file
-		forElement.setAttribute("list", DEFAULT_LIST_VALUE);
-		forElement.setAttribute("param", DEFAULT_PARAM_VALUE);
+		forElement.setAttribute("list", list.getValue().toString());
+		forElement.setAttribute("param", param.getValue().toString());
 		forElement.setAttribute("delimiter", CommonResources.DELIMITER);
 		addPropertiesToElement(forElement);
 		appendAdditionalData(forElement);
